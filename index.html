@@ -12,7 +12,7 @@
 		<script type="text/javascript" src="./resources/jquery/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="./resources/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- 		<script type="text/javascript" src="./resources/bootstrap/js/bootstrap.js"></script> -->
-		
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<link href="./resources/css/shop-homepage.css" rel="stylesheet">
 
 		<script>
@@ -27,6 +27,12 @@
 					success : function(test){
 						console.log(test);
 					}
+				})
+
+				axios.get('https://www.justice21.org/newhome/region/board_view.html?cafe_code=0660&bbs_code=883&num=64463&page=1')
+				.then(function (response) {
+					// handle success
+					console.log(response);
 				})
 			})
 		</script>
